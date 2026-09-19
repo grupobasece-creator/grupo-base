@@ -1,0 +1,17 @@
+{
+  "name": "Grupo BASE",
+  "short_name": "BASE",
+  "description": "Estrutura, palco, som, luz, painel de LED e gerador para eventos, com equipe própria.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050507",
+  "theme_color": "#050507",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "assets/img/favicon.png",
+      "sizes": "860x180",
+      "type": "image/png"
+    }
+  ]
+}
