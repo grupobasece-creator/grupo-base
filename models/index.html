@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BASE — 3 novas direções</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap">
+  <style>
+    :root { --ease: cubic-bezier(0.32, 0.72, 0, 1); }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100dvh;
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      background: #030304; color: #eef2f4;
+      display: grid; place-items: center;
+      padding: clamp(24px, 6vw, 64px);
+    }
+    .wrap { width: min(1100px, 100%); }
+    h1 { font-size: clamp(28px, 5vw, 42px); letter-spacing: -0.04em; margin: 0 0 8px; }
+    .lead { color: #8b959a; margin: 0 0 36px; max-width: 54ch; line-height: 1.6; }
+    .grid { display: grid; gap: 14px; }
+    @media (min-width: 700px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1000px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+    a.card {
+      text-decoration: none; color: inherit; display: block;
+      padding: 1.5px; border-radius: 1.5rem;
+      transition: transform 700ms var(--ease);
+    }
+    a.card:hover { transform: translateY(-4px); }
+    a.card:active { transform: scale(0.98); }
+    .card-in {
+      border-radius: calc(1.5rem - 1.5px);
+      padding: 28px 24px; min-height: 220px;
+      display: flex; flex-direction: column; justify-content: flex-end; gap: 8px;
+      position: relative; overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .tag { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; opacity: 0.65; }
+    .card h2 { margin: 0; font-size: 20px; letter-spacing: -0.03em; }
+    .card p { margin: 0; font-size: 13px; opacity: 0.72; line-height: 1.5; }
+    .orb {
+      position: absolute; border-radius: 50%; pointer-events: none; filter: blur(40px);
+    }
+    .a .card-in { background: #08080c; }
+    .a .orb { width: 160px; height: 160px; top: -40px; right: -20px; background: rgba(180,210,255,0.35); }
+    .b .card-in { background: #0a0908; }
+    .b .orb { width: 180px; height: 180px; bottom: -50px; left: -30px; background: rgba(232,165,74,0.4); }
+    .c .card-in { background: #070b0c; }
+    .c .orb { width: 140px; height: 140px; top: 20%; left: 40%; background: rgba(94,196,212,0.4); }
+    .d .card-in { background: #0a0612; }
+    .d .orb { width: 170px; height: 170px; top: -30px; right: 10%; background: rgba(200,107,255,0.45); }
+    .e .card-in { background: #050505; }
+    .e .orb { width: 200px; height: 120px; top: -20px; left: 30%; background: rgba(255,255,255,0.28); border-radius: 50%; }
+    .f .card-in { background: #050a08; }
+    .f .orb { width: 160px; height: 160px; bottom: -40px; right: -20px; background: rgba(125,255,200,0.35); }
+    .g .card-in {
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.92), rgba(0,0,0,.2)),
+        url("../assets/img/portfolio/conferencia-nordeste.jpg") center/cover;
+    }
+    .g .orb { width: 220px; height: 120px; top: -10px; right: -50px; background: rgba(190,210,255,.42); }
+    .h .card-in {
+      background:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px), #070707;
+      background-size: 32px 32px;
+    }
+    .h .orb { width: 190px; height: 4px; top: 58px; right: -35px; background: #ff4d1f; filter: blur(7px); transform: rotate(-22deg); }
+    .i .card-in { background: radial-gradient(circle at 20% 5%,rgba(216,199,168,.28),transparent 44%),#090908; }
+    .i .orb { width: 160px; height: 110px; bottom: -25px; right: -20px; background: rgba(216,199,168,.25); }
+    .new { position: relative; }
+    .new::before {
+      content: "NOVA DIREÇÃO"; position: absolute; z-index: 2; top: 15px; right: 15px;
+      padding: 6px 9px; border-radius: 999px; background: rgba(255,255,255,.92); color: #050505;
+      font-size: 8px; font-weight: 700; letter-spacing: .14em;
+    }
+    .archive-title { margin: 46px 0 14px; color: #6f777b; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; }
+    .back { display: inline-block; margin-top: 28px; color: #8b959a; font-size: 14px; text-decoration: none; }
+    .back:hover { color: #eef2f4; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>3 direções realmente novas</h1>
+    <p class="lead">Não são apenas novas cores. Cada conceito muda composição, tipografia, ritmo, narrativa e comportamento.</p>
+    <div class="grid">
+      <a class="card g new" href="modelo-g.html">
+        <div class="card-in">
+          <span class="orb" aria-hidden="true"></span>
+          <span class="tag">Modelo G</span>
+          <h2>Monolith Stage</h2>
+          <p>Cinematográfico, monumental e construído sobre uma fotografia real.</p>
+        </div>
+      </a>
+      <a class="card h new" href="modelo-h.html">
+        <div class="card-in">
+          <span class="orb" aria-hidden="true"></span>
+          <span class="tag">Modelo H</span>
+          <h2>Signal Grid</h2>
+          <p>Técnico, preciso e operacional. Grade, sinal e linguagem de sistema.</p>
+        </div>
+      </a>
+      <a class="card i new" href="modelo-i.html">
+        <div class="card-in">
+          <span class="orb" aria-hidden="true"></span>
+          <span class="tag">Modelo I</span>
+          <h2>Nocturne</h2>
+          <p>Luxo editorial, névoa quente e contraste entre metal e palco.</p>
+        </div>
+      </a>
+    </div>
+    <p class="archive-title">Modelos anteriores</p>
+    <div class="grid">
+      <a class="card a" href="modelo-a.html">
+        <div class="card-in">
+          <span class="orb" aria-hidden="true"></span>
+          <span class="tag">Modelo A</span>
+          <h2>Beam Void</h2>
+          <p>OLED + feixes de luz cênica. Bento assimétrico.</p>
+        </div>
+      </a>
+      <a class="card b" href="modelo-b.html">
+        <div class="card-in">
+          <span class="orb" aria-hidden="true"></span>
+          <span class="tag">Modelo B</span>
+          <h2>Tungsten Fog</h2>
+          <p>Escuro quente + orbes de luz tungsten. Split editorial.</p>
+        </div>
+      </a>
+      <a class="card c" href="modelo-c.html">
+        <div class="card-in">
+          <span class="orb" aria-hidden="true"></span>
+          <span class="tag">Modelo C</span>
+          <h2>LED Haze</h2>
+          <p>Escuro frio + névoa LED ciano. Cards em cascata.</p>
+        </div>
+      </a>
+      <a class="card d" href="modelo-d.html">
+        <div class="card-in">
+          <span class="orb" aria-hidden="true"></span>
+          <span class="tag">Modelo D</span>
+          <h2>Prism Sweep</h2>
+          <p>Escuro violeta + lasers em varredura. Split editorial.</p>
+        </div>
+      </a>
+      <a class="card e" href="modelo-e.html">
+        <div class="card-in">
+          <span class="orb" aria-hidden="true"></span>
+          <span class="tag">Modelo E</span>
+          <h2>Spot Fall</h2>
+          <p>Preto absoluto + cone de holofote. Bento assimétrico.</p>
+        </div>
+      </a>
+      <a class="card f" href="modelo-f.html">
+        <div class="card-in">
+          <span class="orb" aria-hidden="true"></span>
+          <span class="tag">Modelo F</span>
+          <h2>Aurora Metal</h2>
+          <p>Escuro verde-metal + aurora. Cards em cascata.</p>
+        </div>
+      </a>
+    </div>
+    <a class="back" href="../index.html">← Site atual (produção local)</a>
+  </div>
+</body>
+</html>
