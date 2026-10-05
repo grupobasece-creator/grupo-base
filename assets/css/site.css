@@ -77,16 +77,17 @@ section{padding-block:clamp(56px,8vw,112px)}
 /* trabalhos cinematográficos */
 .reel{display:grid;gap:clamp(16px,2.2vw,26px)}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.2vw,26px)}
-.shotcard{position:relative;display:block;text-decoration:none;overflow:hidden;background:#0d0d0e;border:1px solid var(--line)}
-.shotcard img{width:100%;height:100%;object-fit:cover;aspect-ratio:16/9;transition:transform .7s cubic-bezier(.2,.7,.2,1);opacity:.9}
-.shotcard:hover img{transform:scale(1.04);opacity:1}
-.shotcard .ov{position:absolute;inset:auto 0 0 0;padding:clamp(18px,2.4vw,32px);
-  background:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.45) 28%,rgba(0,0,0,.82) 62%,rgba(0,0,0,.94) 100%)}
-.shotcard .ov>*{max-width:62ch}
+.shotcard{display:grid;grid-template-rows:auto 1fr;text-decoration:none;background:#0d0d0e;border:1px solid var(--line);overflow:hidden;transition:border-color .3s,background .3s}
+.shotcard:hover{border-color:rgba(255,191,0,.34);background:#101011}
+.shotcard figure{margin:0;overflow:hidden;background:#000}
+.shotcard img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.shotcard.tall img{aspect-ratio:21/9}
+.shotcard:hover img{transform:scale(1.04)}
+.shotcard .ov{padding:clamp(18px,2.1vw,26px);display:grid;align-content:start;border-top:1px solid var(--line)}
 .shotcard .k{font-family:var(--disp);font-weight:700;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--amber-lt)}
-.shotcard h3{font-size:clamp(17px,2vw,25px);margin-top:8px}
-.shotcard p{color:#C7C7C4;font-size:15px;margin-top:8px;max-width:52ch}
-.shotcard .fx{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:12px;font-size:12.5px;letter-spacing:.06em;color:#9A9A97}
+.shotcard h3{font-size:clamp(17px,1.8vw,23px);margin-top:9px;line-height:1.15}
+.shotcard p{color:#A9A9A5;font-size:15px;margin-top:10px;max-width:60ch}
+.shotcard .fx{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:14px;padding-top:13px;border-top:1px solid var(--line);font-size:12.5px;letter-spacing:.06em;color:#86867F}
 .shotcard .fx b{color:#E6E3DC;font-weight:600}
 .tall img{aspect-ratio:21/9}
 
@@ -147,11 +148,7 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--y);outline-offset:3px
 }
 @media (max-width:860px){
   /* no celular a foto aparece inteira e o texto vem embaixo */
-  .shotcard{border:0;background:transparent;overflow:visible;display:grid}
-  .shotcard img{aspect-ratio:16/10;height:auto;border:1px solid var(--line);opacity:1}
   .tall img{aspect-ratio:16/10}
-  .shotcard .ov{position:static;background:none;padding:14px 2px 0}
-  .shotcard p{max-width:none}
 }
 @media (max-width:560px){ .flow{grid-template-columns:1fr} }
 
@@ -220,4 +217,12 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--y);outline-offset:3px
   .mk--hero{width:min(100%,290px)}
   .mk--nav{width:104px}
   .nav-in{min-height:66px}
+}
+@media (max-width:560px){
+  .nav .btn{font-size:11.5px;padding:11px 14px;letter-spacing:.08em;white-space:nowrap}
+  .nav-in{gap:12px}
+}
+
+@media (max-width:860px){
+  .shotcard img,.shotcard.tall img{aspect-ratio:16/10}
 }
