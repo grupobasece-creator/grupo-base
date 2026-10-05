@@ -8,6 +8,7 @@
   --dim: #6d777c;
   --tungsten: #e8a54a;
   --tungsten-deep: #c47e2a;
+  --amber: #FFBF00;
   --led: #7ec8d4;
   --display: "Archivo", system-ui, sans-serif;
   --body: "Plus Jakarta Sans", system-ui, sans-serif;
@@ -916,3 +917,105 @@ textarea:focus-visible {
   section { padding-block: 80px; }
   .claim { padding-block: 80px; }
 }
+
+
+/* ===== clareza comercial: hero, faixa de CTA ===== */
+.hero-assin {
+  margin-top: 10px;
+  font-family: var(--font-display, "Archivo", sans-serif);
+  font-weight: 700;
+  font-size: clamp(13px, 1.5vw, 16px);
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--amber, #C08A34);
+}
+.hero-precisa {
+  font-family: var(--font-display, "Archivo", sans-serif);
+  font-weight: 700;
+  font-size: clamp(19px, 2.2vw, 26px);
+  letter-spacing: -.02em;
+  margin-bottom: 10px;
+}
+.hero-note { margin-top: 14px; font-size: 14.5px; opacity: .8; }
+.hero-note b { color: var(--amber, #C08A34); }
+.btn--grande { font-size: 15px; padding-inline: 28px; }
+
+.ctaband { padding-block: clamp(36px, 5vw, 72px); }
+.ctaband-in {
+  display: flex; flex-wrap: wrap; gap: 20px 36px;
+  align-items: center; justify-content: space-between;
+}
+.ctaband h2 { font-size: clamp(22px, 3vw, 34px); max-width: 20ch; }
+.ctaband p { margin-top: 8px; opacity: .78; max-width: 46ch; }
+.quote-form select {
+  width: 100%; font: inherit; color: inherit;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 10px; padding: 12px 14px;
+}
+
+
+/* ===== lockup oficial (GRUPO centralizado sobre BASE) ===== */
+.lk .g { display: none; }
+.lk--nav { width: 118px; }
+.lk--hero { width: min(100%, 430px); }
+.lk--foot { width: 128px; }
+
+
+/* ===== três frentes (Eventos, Geradores, Tecnologia) ===== */
+.frentes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.frente-core { padding: clamp(24px, 2.8vw, 36px); height: 100%; display: flex; flex-direction: column; gap: 14px; }
+.frente-logo { width: min(100%, 186px); height: auto; }
+.frente-core p { opacity: .82; }
+.frente-core ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.frente-core li { position: relative; padding-left: 16px; font-size: 15px; opacity: .72; }
+.frente-core li::before { content: ""; position: absolute; left: 0; top: 11px; width: 8px; height: 1px; background: var(--amber, #C08A34); }
+.frente-cta { margin-top: auto; align-self: flex-start; }
+
+/* card largo de geradores */
+.svc--wide { grid-column: span 12; }
+.svc--wide ul { display: block; columns: 2; column-gap: 32px; }
+.svc--wide li { break-inside: avoid; }
+
+@media (max-width: 900px) {
+  .frentes { grid-template-columns: 1fr; }
+  .svc--wide ul { columns: 1; }
+}
+
+
+/* ===== hero: marca em âmbar, posicionamento em destaque ===== */
+#hero-title { color: var(--amber, #C08A34); }
+.hero-precisa { font-size: clamp(21px, 2.6vw, 30px); }
+.hero-lead {
+  font-size: clamp(17px, 1.9vw, 21px);
+  line-height: 1.5;
+  max-width: 44ch;
+  opacity: .96;
+}
+.hero-lead strong { color: #fff; font-weight: 700; }
+
+
+/* ===== ajuste final do topo ===== */
+#hero-title { color: var(--amber); }
+.hero-note b { color: var(--amber); }
+.frente-core li::before { background: var(--amber); }
+
+.hero-lead {
+  color: var(--ink);
+  opacity: 1;
+  font-size: clamp(17.5px, 2vw, 22px);
+  line-height: 1.5;
+  max-width: 46ch;
+  border-left: 2px solid var(--amber);
+  padding-left: 18px;
+}
+.hero-lead strong { color: #fff; font-weight: 700; }
+@media (max-width: 600px) { .hero-lead { padding-left: 14px; } }
+
+
+/* ===== acento único da marca nos títulos e rótulos ===== */
+h2 em { font-style: normal; color: var(--amber); }
+.eyebrow { color: var(--amber); border-color: rgba(255, 191, 0, 0.28); background: rgba(255, 191, 0, 0.06); }
+.step b { color: var(--amber); }
+.sig b { color: var(--amber); }
+.case-specs b, .work .fx b { color: var(--amber); }

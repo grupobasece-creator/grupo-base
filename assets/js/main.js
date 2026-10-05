@@ -95,10 +95,11 @@
   function buildWhatsAppUrl(fields) {
     var lines = ["Olá! Gostaria de um orçamento para um evento."];
     if (fields.name) lines.push("Nome: " + fields.name);
+    if (fields.whats) lines.push("WhatsApp: " + fields.whats);
     if (fields.date) lines.push("Data: " + fields.date);
     if (fields.place) lines.push("Local: " + fields.place);
-    if (fields.audience) lines.push("Público: " + fields.audience);
-    if (fields.need) lines.push("Necessidade: " + fields.need);
+    if (fields.kind) lines.push("Tipo de evento: " + fields.kind);
+    if (fields.need) lines.push("Necessidades: " + fields.need);
     return "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(lines.join("\n"));
   }
 
@@ -110,7 +111,8 @@
         name: String(data.get("name") || "").trim(),
         date: String(data.get("date") || "").trim(),
         place: String(data.get("place") || "").trim(),
-        audience: String(data.get("audience") || "").trim(),
+        whats: String(data.get("whats") || "").trim(),
+        kind: String(data.get("kind") || "").trim(),
         need: String(data.get("need") || "").trim()
       });
       window.open(url, "_blank", "noopener");
