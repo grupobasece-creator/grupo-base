@@ -7,7 +7,7 @@
 :root{
   --bg:#09090A; --bg-2:#111112; --line:#272521; --line-soft:#1A1917;
   --ink:#F3F1EC; --mute:#A5A19A; --dim:#726E67;
-  --y:#FFBF00; --amber:#C08A34; --amber-lt:#D9A54A;
+  --y:#FFBF00; --amber:var(--y); --amber-lt:var(--y);
   --disp:"Archivo","Arial Black",sans-serif; --sans:"Source Sans 3","Myriad Pro",Arial,sans-serif;
   --g:clamp(18px,5vw,76px); --max:1340px;
 }
@@ -64,6 +64,7 @@ h1,h2,h3{margin:0;font-family:var(--disp);font-weight:800;line-height:.98;letter
 section{padding-block:clamp(56px,8vw,112px)}
 .head{display:grid;gap:14px;max-width:44ch;margin-bottom:clamp(28px,4vw,48px)}
 .head h2{font-size:clamp(28px,4.6vw,52px)}
+.head h2 em{font-style:normal;color:var(--amber-lt)}
 .head p{color:var(--mute)}
 
 /* marcas em faixa */
@@ -169,6 +170,7 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--y);outline-offset:3px
 .ctaband-in{position:relative;padding-block:clamp(34px,4.6vw,60px);display:flex;flex-wrap:wrap;gap:20px 32px;
   align-items:center;justify-content:space-between}
 .ctaband h3{font-size:clamp(21px,2.8vw,32px);max-width:22ch}
+.ctaband h3 em{font-style:normal;color:var(--amber-lt)}
 .ctaband p{color:var(--mute);font-size:15px;margin-top:8px}
 .ctaband .acts{margin-top:0}
 
