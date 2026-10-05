@@ -7,7 +7,7 @@
 :root{
   --bg:#09090A; --bg-2:#111112; --line:#272521; --line-soft:#1A1917;
   --ink:#F3F1EC; --mute:#A5A19A; --dim:#726E67;
-  --y:#FFBF00; --amber:#C08A34; --amber-lt:#D9A54A;
+  --y:#FFBF00; --amber:#FFBF00; --amber-lt:#FFBF00;
   --disp:"Archivo","Arial Black",sans-serif; --sans:"Source Sans 3","Myriad Pro",Arial,sans-serif;
   --g:clamp(18px,5vw,76px); --max:1340px;
 }
