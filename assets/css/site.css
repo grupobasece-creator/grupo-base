@@ -257,3 +257,6 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--y);outline-offset:3px
   .svc-wide-foto{order:-1;padding:0 0 6px}
   .svc-wide-foto img{max-width:100%}
 }
+
+/* enfase em ambar, sempre sem italico */
+h1 em, h2 em, h3 em, .sig em{font-style:normal;color:var(--amber)}
