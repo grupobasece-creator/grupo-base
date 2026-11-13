@@ -55,6 +55,20 @@
   gtag('js', new Date());
   gtag('config', 'AW-18570167812');
 </script>
+<!-- Conversão Google Ads: clique em link de WhatsApp e envio do formulário de orçamento -->
+<script>
+  (function () {
+    var SEND_TO = 'AW-18570167812/xyPaCOaq4bcdEISM-ZZF';
+    function conv() { try { gtag('event', 'conversion', {'send_to': SEND_TO}); } catch (e) {} }
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a');
+      if (a && a.href && (a.href.indexOf('wa.me') > -1 || a.href.indexOf('whatsapp.com') > -1)) { conv(); }
+    });
+    document.addEventListener('submit', function (e) {
+      if (e.target && e.target.id === 'form-orcamento') { conv(); }
+    });
+  })();
+</script>
 </head>
 <body>
 
