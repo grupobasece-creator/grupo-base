@@ -260,3 +260,15 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--y);outline-offset:3px
 
 /* enfase em ambar, sempre sem italico */
 h1 em, h2 em, h3 em, .sig em{font-style:normal;color:var(--amber)}
+
+/* ---- bloco de TV: foto na esquerda no desktop ---- */
+.svc--rev{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
+.svc-foto--tv img{max-width:440px;max-height:560px;object-fit:cover;object-position:center 40%;border-radius:6px;object-fit:cover;filter:none;box-shadow:0 26px 34px -10px rgba(0,0,0,.72)}
+.svc--rev.sem-foto{grid-template-columns:1fr}
+@media (max-width:900px){
+  .svc--rev{grid-template-columns:1fr}
+}
+
+/* cabeçalho de Serviços mais largo, sem coluna estreita */
+.head--wide{max-width:min(100%,68ch)}
+.head--wide h2{max-width:none}
